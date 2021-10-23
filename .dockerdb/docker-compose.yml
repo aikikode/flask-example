@@ -1,0 +1,13 @@
+version: '3'
+services:
+  example_project_db:
+    image: mysql:8.0.27
+    environment:
+      MYSQL_DATABASE: 'flaskr_db'
+      MYSQL_USER: 'myusername'
+      MYSQL_PASSWORD: 'secure_password'
+      MYSQL_ROOT_PASSWORD: 'admin_password'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
